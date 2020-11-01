@@ -1,0 +1,54 @@
+//Date:01-11-2020
+//Time:11.44AM
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+    public static void duplicate_elements(int a[],int n){
+        int temp;
+        int zemp[] = new int[n];
+        int z=0;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if(a[i]>a[j]){
+                    temp = a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+       
+        System.out.println("====================");
+        for(int b=0;b<n-1;b++){
+            if(a[b]!=a[b+1]){
+                zemp[z++] = a[b];
+            }
+            
+        }
+        zemp[z++]=a[n-1];
+        
+         System.out.println("================");
+        for(int l=0;l<n-1;l++){
+            System.out.println(zemp[l] + " ");
+        }
+        
+        
+    }
+	public static void main(String[] args) {
+		int n;
+		Scanner scan = new Scanner(System.in);
+		n = scan.nextInt();
+		int a[] = new int[n];
+		for(int i=0;i<n;i++){
+		    a[i] = scan.nextInt();
+		}
+		duplicate_elements(a,n);
+	}
+}
