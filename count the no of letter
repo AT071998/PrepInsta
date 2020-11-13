@@ -1,0 +1,13 @@
+//count the letter in a word
+
+
+int main(){
+    char str[30] = "Amrata";
+    int length = 0;
+    int i = 0;
+    while(str[i]!='\0'){
+        length++;
+        i++;
+    }
+    printf("The number of letters is %d",length);
+}
